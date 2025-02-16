@@ -1,8 +1,7 @@
-// require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const app = express()
-const port = 3000
 const githubdata = 
 {
     "login": "hiteshchoudhary",
@@ -59,11 +58,11 @@ app.get('/youtube', (req, res) =>{
 })
 
 app.get('/githubdata', (req, res) =>{
-    res.json(githubdata)
+    res.json(process.env.PORT)
 })
 
 app.get
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${process.env.PORT}`)
 })
