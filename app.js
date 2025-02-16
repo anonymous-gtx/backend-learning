@@ -58,11 +58,9 @@ app.get('/youtube', (req, res) =>{
 })
 
 app.get('/githubdata', (req, res) =>{
-    res.json(process.env.PORT)
+    res.json(githubdata)
 })
 
-app.get
-
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port ${process.env.PORT}`)
 })
